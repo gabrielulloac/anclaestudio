@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Figue — Ilustraciones en vivo</title>
+  <meta name="description" content="Figue dibuja a tus invitados en vivo, en papel. Ilustraciones en vivo para bodas, eventos de marca, cumpleaños y celebraciones.">
+  <meta property="og:title" content="Figue — Ilustraciones en vivo">
+  <meta property="og:description" content="Retratos dibujados a mano, en vivo, durante tu evento. Un recuerdo en papel para cada invitado.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- Trazos reutilizables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter>
+    </defs>
+  </svg>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a href="#top" class="brand" aria-label="Figue, inicio">
+        <svg class="brand__fig" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8c-2 0-3 2-3 4-7 2-13 10-13 18 0 8 7 12 16 12s16-4 16-12c0-8-6-16-13-18 0-2-1-4-3-4z" fill="currentColor"/><path d="M24 8c3-4 8-4 10-2-3 3-7 3-10 2z" fill="var(--leaf)"/></svg>
+        Figue
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span><span></span></button>
+      <nav id="menu" class="nav__menu" aria-label="Principal">
+        <a href="#que-es">Qué es</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#reservar" class="btn btn--small">Reservar fecha</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <div class="hero__text">
+          <p class="hand hero__kicker">hola, soy Figue ✶</p>
+          <h1>Ilustraciones <span class="underline">en vivo</span>,<br>hechas en papel.</h1>
+          <p class="hero__lead">Llego a tu evento con mis lápices y dibujo a tus invitados en el momento. Cada persona se lleva un retrato único, hecho a mano frente a sus ojos.</p>
+          <div class="hero__cta">
+            <a href="#reservar" class="btn">Reservar mi fecha</a>
+            <a href="https://www.instagram.com/figue_enpapel/" class="link" target="_blank" rel="noopener">Ver en Instagram ↗</a>
+          </div>
+        </div>
+        <div class="hero__art" aria-hidden="true">
+          <figure class="paper paper--a">
+            <span class="tape"></span>
+            <svg viewBox="0 0 200 220" class="sketch">
+              <!-- pareja -->
+              <path d="M62 120c-18-4-26-26-20-46 6-20 28-28 44-18 14 10 16 34 6 50-6 10-18 16-30 14z"/>
+              <path d="M44 78c8-20 34-30 52-12 4-10-2-24-18-28-20-6-40 10-34 40z"/>
+              <path d="M60 92h2M78 92h2M64 106c4 4 10 4 14 0"/>
+              <path d="M128 124c-16-2-24-22-18-40 6-18 24-24 38-14 12 10 12 30 4 44-6 8-14 12-24 10z"/>
+              <path d="M104 90c-10-30 30-46 50-24 8 10 10 30 4 50 10-20 8-46-6-60-22-22-58-8-48 34z"/>
+              <path d="M124 100h2M140 100h2M126 112c4 3 9 3 12 0"/>
+              <path d="M30 210c4-40 24-62 48-62 18 0 30 10 36 24 6-14 18-22 34-22 22 0 36 22 40 60"/>
+              <path d="M150 50c4-6 12-6 14 0 2 6-6 10-14 16-8-6-16-10-14-16 2-6 10-6 14 0z" class="accent"/>
+            </svg>
+            <figcaption class="hand">Ana & Tomás · boda</figcaption>
+          </figure>
+          <figure class="paper paper--b">
+            <span class="tape"></span>
+            <svg viewBox="0 0 200 220" class="sketch">
+              <!-- perro -->
+              <path d="M60 80c0-30 20-44 42-44s42 14 42 44c0 30-18 54-42 54S60 110 60 80z"/>
+              <path d="M62 66c-20-6-30 14-24 40 4 14 14 14 20 4M142 66c20-6 30 14 24 40-4 14-14 14-20 4"/>
+              <path d="M84 78h2M118 78h2"/>
+              <path d="M94 96c4-4 12-4 16 0-2 6-14 6-16 0zM102 102v8M94 112c4 4 12 4 16 0"/>
+              <path d="M50 210c6-40 24-70 52-70s46 30 52 70"/>
+              <path d="M80 140c10 10 34 10 44 0" class="accent"/>
+            </svg>
+            <figcaption class="hand">Toto · invitado especial</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUÉ ES -->
+    <section class="section" id="que-es">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">¿Qué es una ilustración en vivo?</p>
+          <h2>Un recuerdo que se dibuja mientras pasa.</h2>
+        </div>
+        <div class="prose">
+          <p>Durante tu evento me instalo en un rincón con mi mesa, papel y lápices. Los invitados se acercan, posan unos minutos y se van con un retrato ilustrado a mano, listo para guardar o enmarcar.</p>
+          <p>Es una experiencia que entretiene, une a la gente y deja algo que dura mucho más que una foto en el celular.</p>
+          <ul class="facts">
+            <li><strong class="hand">5–8 min</strong><span>por retrato</span></li>
+            <li><strong class="hand">100%</strong><span>a mano, en papel</span></li>
+            <li><strong class="hand">1 c/u</strong><span>se lo lleva cada invitado</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTOS -->
+    <section class="section section--tint" id="eventos">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Para qué eventos</p>
+          <h2>Dibujo donde haya algo que celebrar</h2>
+        </header>
+        <div class="events">
+          <article class="event">
+            <svg viewBox="0 0 48 48" class="event__icon" aria-hidden="true"><path d="M17 22a8 8 0 1 0 0 .1M31 22a8 8 0 1 0 0 .1M20 10l4-5 4 5"/></svg>
+            <h3>Bodas</h3>
+            <p>Un regalo distinto para tus invitados y un recuerdo de su presencia para ti.</p>
+          </article>
+          <article class="event">
+            <svg viewBox="0 0 48 48" class="event__icon" aria-hidden="true"><path d="M8 40V18l16-10 16 10v22M18 40V28h12v12"/></svg>
+            <h3>Marcas y empresas</h3>
+            <p>Activaciones, lanzamientos y eventos corporativos con ilustraciones personalizadas con tu marca.</p>
+          </article>
+          <article class="event">
+            <svg viewBox="0 0 48 48" class="event__icon" aria-hidden="true"><path d="M10 40V26h28v14zM10 32c5 3 9-3 14 0s9 3 14 0M24 26v-8M24 12c-2 2-2 4 0 6 2-2 2-4 0-6z"/></svg>
+            <h3>Cumpleaños</h3>
+            <p>Para todas las edades. Una actividad que los niños y los grandes disfrutan por igual.</p>
+          </article>
+          <article class="event">
+            <svg viewBox="0 0 48 48" class="event__icon" aria-hidden="true"><path d="M8 18h32l-4 22H12zM16 18l8-10 8 10M24 26v6"/></svg>
+            <h3>Ferias y mercados</h3>
+            <p>Retratos rápidos para el público en ferias, festivales y espacios culturales.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="section" id="como">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Cómo funciona</p>
+          <h2>Simple, de principio a fin</h2>
+        </header>
+        <ol class="steps">
+          <li><span class="hand step__n">1</span><h3>Me escribes</h3><p>Cuéntame la fecha, el lugar y cuántos invitados esperas.</p></li>
+          <li><span class="hand step__n">2</span><h3>Armamos la propuesta</h3><p>Definimos horas, formato del papel y si quieres algún detalle personalizado.</p></li>
+          <li><span class="hand step__n">3</span><h3>Dibujo en vivo</h3><p>Llego con todo mi material y me instalo en un rincón del evento.</p></li>
+          <li><span class="hand step__n">4</span><h3>Se lo llevan</h3><p>Cada invitado recibe su ilustración en un sobre, lista para guardar.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section section--tint" id="galeria">
+      <div class="wrap">
+        <header class="section__head section__head--row">
+          <div>
+            <p class="eyebrow">Galería</p>
+            <h2>Algunos dibujos</h2>
+          </div>
+          <a href="https://www.instagram.com/figue_enpapel/" class="link" target="_blank" rel="noopener">Más en @figue_enpapel ↗</a>
+        </header>
+        <!-- Reemplaza cada .shot por una <img src="img/....jpg" alt="..."> con fotos reales -->
+        <div class="gallery">
+          <figure class="shot"><div class="shot__ph"><span class="hand">tu foto aquí</span></div><figcaption>Boda en el campo</figcaption></figure>
+          <figure class="shot"><div class="shot__ph"><span class="hand">tu foto aquí</span></div><figcaption>Lanzamiento de marca</figcaption></figure>
+          <figure class="shot"><div class="shot__ph"><span class="hand">tu foto aquí</span></div><figcaption>Cumpleaños 30</figcaption></figure>
+          <figure class="shot"><div class="shot__ph"><span class="hand">tu foto aquí</span></div><figcaption>Feria de diseño</figcaption></figure>
+          <figure class="shot"><div class="shot__ph"><span class="hand">tu foto aquí</span></div><figcaption>Retrato de mascota</figcaption></figure>
+          <figure class="shot"><div class="shot__ph"><span class="hand">tu foto aquí</span></div><figcaption>Evento corporativo</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS -->
+    <section class="section" id="preguntas">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2>Lo que más me preguntan</h2>
+          <p class="muted">¿Tienes otra duda? <a href="#reservar">Escríbeme</a>.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>¿Cuántas ilustraciones alcanzas a hacer?</summary>
+            <p>Entre 8 y 12 retratos individuales por hora, aproximadamente. Los dibujos de parejas o grupos toman un poco más.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto tiempo te contratan normalmente?</summary>
+            <p>Lo más común son entre 2 y 4 horas. Te ayudo a calcularlo según la cantidad de invitados.</p>
+          </details>
+          <details>
+            <summary>¿Qué necesito tener en el lugar?</summary>
+            <p>Solo una mesa pequeña, dos sillas y buena luz. Yo llevo todos los materiales.</p>
+          </details>
+          <details>
+            <summary>¿Se pueden personalizar las ilustraciones?</summary>
+            <p>Sí. Puedo usar papel con el nombre de los novios, la fecha del evento o el logo de tu marca.</p>
+          </details>
+          <details>
+            <summary>¿Viajas a otras ciudades?</summary>
+            <p>Sí, consulta disponibilidad. Los traslados se cotizan aparte.</p>
+          </details>
+          <details>
+            <summary>¿Con cuánta anticipación debo reservar?</summary>
+            <p>Lo ideal es con uno a tres meses de anticipación, sobre todo en temporada alta. Igual pregúntame si es antes.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVAR -->
+    <section class="section section--ink" id="reservar">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Reservar</p>
+          <h2>¿Dibujamos tu evento?</h2>
+          <p>Completa los datos y te armo el mensaje. Se copia automáticamente y te llevo a mi Instagram para que solo lo pegues y envíes.</p>
+          <a class="ig" href="https://ig.me/m/figue_enpapel" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+            @figue_enpapel
+          </a>
+        </div>
+        <form class="form" id="booking" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="nombre">Tu nombre</label>
+              <input id="nombre" name="nombre" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="fecha">Fecha del evento</label>
+              <input id="fecha" name="fecha" type="date" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="tipo">Tipo de evento</label>
+              <select id="tipo" name="tipo">
+                <option>Boda</option>
+                <option>Evento de marca / empresa</option>
+                <option>Cumpleaños</option>
+                <option>Feria o mercado</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="invitados">N.º de invitados</label>
+              <input id="invitados" name="invitados" type="number" min="1" inputmode="numeric">
+            </div>
+          </div>
+          <div class="field">
+            <label for="lugar">Ciudad / lugar</label>
+            <input id="lugar" name="lugar" required>
+          </div>
+          <div class="field">
+            <label for="mensaje">Algo más que quieras contarme</label>
+            <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+          </div>
+          <button class="btn btn--light" type="submit">Copiar mensaje y abrir Instagram</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+          <pre class="form__preview" hidden></pre>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span class="hand footer__sig">Figue ✶ ilustraciones en vivo</span>
+      <span>© <span id="year">2026</span> · <a href="https://www.instagram.com/figue_enpapel/" target="_blank" rel="noopener">@figue_enpapel</a></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
