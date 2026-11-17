@@ -75,9 +75,21 @@
     try { await navigator.clipboard.writeText(msg); copied = true; } catch (_) { /* sin permiso */ }
 
     status.textContent = copied
-      ? '¡Mensaje copiado! Pégalo en el chat de Instagram que se acaba de abrir.'
-      : 'Copia este mensaje y pégalo en el chat de Instagram:';
+      ? '¡Mensaje copiado! Ahora ábrelo en Instagram y pégalo en el chat. '
+      : 'Copia este mensaje y pégalo en el chat de Instagram. ';
+    const a = document.createElement('a');
+    a.href = `https://ig.me/m/${IG_USER}`;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.textContent = 'Abrir chat de Instagram ↗';
+    status.appendChild(a);
     status.className = 'form__status is-ok';
-    window.open(`https://ig.me/m/${IG_USER}`, '_blank', 'noopener');
+    if (!copied) {
+      const r = document.createRange();
+      r.selectNodeContents(preview);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(r);
+    }
   });
 })();
