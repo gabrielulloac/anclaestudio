@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ancla Estudio — Diseño y marca con raíz</title>
+  <meta name="description" content="Ancla Estudio es un estudio creativo de identidad, diseño web y contenido. Creamos marcas con fundamento.">
+  <meta property="og:title" content="Ancla Estudio">
+  <meta property="og:description" content="Estudio creativo de identidad, diseño web y contenido.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a href="#top" class="brand" aria-label="Ancla Estudio, inicio">
+        <svg class="brand__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="9" r="4"/><path d="M24 13v28"/><path d="M16 20h16"/><path d="M8 28c0 8 7 13 16 13s16-5 16-13"/><path d="M8 28l-3 3M8 28l3 3M40 28l-3 3M40 28l3 3"/></svg>
+        <span>Ancla<em>Estudio</em></span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+      <nav id="menu" class="nav__menu" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#estudio">Estudio</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#contacto" class="btn btn--small">Hablemos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <p class="eyebrow reveal">Estudio creativo · Identidad · Web · Contenido</p>
+        <h1 class="hero__title reveal">Marcas con <em>raíz</em>,<br>ideas que no se las lleva la corriente.</h1>
+        <p class="hero__lead reveal">Diseñamos identidades, sitios web y contenido para proyectos que quieren crecer con fundamento. Estrategia clara, diseño cuidado y cero ruido.</p>
+        <div class="hero__cta reveal">
+          <a href="#contacto" class="btn">Empecemos un proyecto</a>
+          <a href="#proyectos" class="link-arrow">Ver trabajos <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="hero__waves" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 60c120 30 240 30 360 0s240-30 360 0 240 30 360 0 240-30 360 0v60H0z"/></svg>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section section--alt" id="servicios">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">Servicios</p>
+          <h2>Lo que hacemos</h2>
+          <p class="section__lead">Un equipo pequeño, enfocado y de principio a fin. Trabajamos por proyecto o de forma continua.</p>
+        </header>
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <span class="card__num">01</span>
+            <h3>Identidad de marca</h3>
+            <p>Naming, logotipo, sistema visual y guía de marca para que todo hable con la misma voz.</p>
+            <ul class="tags"><li>Estrategia</li><li>Logo</li><li>Brandbook</li></ul>
+          </article>
+          <article class="card reveal">
+            <span class="card__num">02</span>
+            <h3>Diseño y desarrollo web</h3>
+            <p>Sitios rápidos, accesibles y fáciles de mantener. Desde landing pages hasta tiendas online.</p>
+            <ul class="tags"><li>UX/UI</li><li>Desarrollo</li><li>SEO</li></ul>
+          </article>
+          <article class="card reveal">
+            <span class="card__num">03</span>
+            <h3>Contenido y redes</h3>
+            <p>Fotografía, piezas gráficas y dirección de contenido para que tu marca se vea igual de bien en todas partes.</p>
+            <ul class="tags"><li>Fotografía</li><li>Social</li><li>Campañas</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="section" id="proyectos">
+      <div class="wrap">
+        <header class="section__head section__head--row reveal">
+          <div>
+            <p class="eyebrow">Proyectos</p>
+            <h2>Trabajo seleccionado</h2>
+          </div>
+          <div class="filters" role="group" aria-label="Filtrar proyectos">
+            <button class="filter is-active" data-filter="all" aria-pressed="true">Todos</button>
+            <button class="filter" data-filter="marca" aria-pressed="false">Marca</button>
+            <button class="filter" data-filter="web" aria-pressed="false">Web</button>
+            <button class="filter" data-filter="contenido" aria-pressed="false">Contenido</button>
+          </div>
+        </header>
+        <div class="projects">
+          <article class="project reveal" data-cat="marca">
+            <div class="project__img" style="--c1:#1f3a4d;--c2:#c8643b"><span>Marea</span></div>
+            <div class="project__meta"><h3>Marea Café</h3><p>Identidad · 2026</p></div>
+          </article>
+          <article class="project reveal" data-cat="web">
+            <div class="project__img" style="--c1:#2c4a3e;--c2:#e8d9b5"><span>Norte</span></div>
+            <div class="project__meta"><h3>Norte Arquitectos</h3><p>Sitio web · 2026</p></div>
+          </article>
+          <article class="project reveal" data-cat="contenido">
+            <div class="project__img" style="--c1:#7a3b2e;--c2:#f2c9a0"><span>Salitre</span></div>
+            <div class="project__meta"><h3>Salitre Surf</h3><p>Campaña · 2025</p></div>
+          </article>
+          <article class="project reveal" data-cat="marca">
+            <div class="project__img" style="--c1:#3d3a5c;--c2:#b7c4d9"><span>Faro</span></div>
+            <div class="project__meta"><h3>Faro Legal</h3><p>Identidad · 2025</p></div>
+          </article>
+          <article class="project reveal" data-cat="web">
+            <div class="project__img" style="--c1:#1d2b36;--c2:#9fc2c4"><span>Bruma</span></div>
+            <div class="project__meta"><h3>Bruma Studio</h3><p>E-commerce · 2025</p></div>
+          </article>
+          <article class="project reveal" data-cat="contenido">
+            <div class="project__img" style="--c1:#5a4632;--c2:#e6b85c"><span>Puerto</span></div>
+            <div class="project__meta"><h3>Puerto Vino</h3><p>Fotografía · 2024</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTUDIO -->
+    <section class="section section--alt" id="estudio">
+      <div class="wrap split">
+        <div class="reveal">
+          <p class="eyebrow">El estudio</p>
+          <h2>Pocas cosas, muy bien hechas.</h2>
+          <p>Ancla nace de una idea simple: las buenas marcas se sostienen en algo firme. Antes de diseñar, entendemos. Antes de publicar, probamos. Trabajamos cerca de cada cliente, sin intermediarios ni capas innecesarias.</p>
+          <p>Somos un estudio independiente que combina estrategia, diseño y tecnología para construir presencias digitales que duran.</p>
+        </div>
+        <dl class="stats reveal">
+          <div><dt>+40</dt><dd>proyectos entregados</dd></div>
+          <div><dt>6</dt><dd>años de oficio</dd></div>
+          <div><dt>100%</dt><dd>trato directo</dd></div>
+          <div><dt>3</dt><dd>países con clientes</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="section section--dark" id="proceso">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">Proceso</p>
+          <h2>Cómo trabajamos</h2>
+        </header>
+        <ol class="steps">
+          <li class="reveal"><h3>Escuchar</h3><p>Una conversación para entender tu proyecto, tus objetivos y tu público.</p></li>
+          <li class="reveal"><h3>Definir</h3><p>Propuesta clara con alcance, plazos y presupuesto. Sin sorpresas.</p></li>
+          <li class="reveal"><h3>Crear</h3><p>Diseñamos e iteramos contigo en rondas cortas y concretas.</p></li>
+          <li class="reveal"><h3>Lanzar</h3><p>Entregamos, publicamos y te acompañamos después del lanzamiento.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TESTIMONIO -->
+    <section class="section">
+      <div class="wrap">
+        <figure class="quote reveal">
+          <blockquote>“Entendieron lo que queríamos antes de que supiéramos explicarlo. El resultado se siente nuestro.”</blockquote>
+          <figcaption>— Cliente de ejemplo, <span>Marea Café</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section section--alt" id="contacto">
+      <div class="wrap split">
+        <div class="reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2>¿Tienes un proyecto en mente?</h2>
+          <p>Cuéntanos un poco y te respondemos en menos de 48 horas hábiles.</p>
+          <ul class="contact-list">
+            <li><span>Email</span><a href="mailto:hola@anclaestudio.com">hola@anclaestudio.com</a></li>
+            <li><span>Instagram</span><a href="#" rel="noopener">@anclaestudio</a></li>
+            <li><span>Ubicación</span>Remoto · Latinoamérica</li>
+          </ul>
+        </div>
+        <form class="form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="servicio">¿Qué necesitas?</label>
+            <select id="servicio" name="servicio">
+              <option>Identidad de marca</option>
+              <option>Sitio web</option>
+              <option>Contenido y redes</option>
+              <option>Otro / no estoy seguro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="mensaje">Cuéntanos del proyecto</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar mensaje</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© <span id="year">2026</span> Ancla Estudio</span>
+      <a href="#top">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
