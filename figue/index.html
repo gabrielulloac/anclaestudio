@@ -107,7 +107,7 @@
           <p class="label">Servicios</p>
           <h2 data-split>Dos líneas de trabajo</h2>
         </header>
-        <div class="paths">
+        <div class="paths swipe">
           <a class="path" href="#productos" data-cursor="Ver">
             <span class="path__tag">@figue_ilustraciones</span>
             <h3>Ilustración para productos, textiles y papelería</h3>
@@ -137,7 +137,7 @@
           <p class="lead">Creo ilustraciones originales pensadas para imprimirse, estamparse y venderse. Trabajo por encargo para marcas y estudios, adaptando cada pieza a su técnica de producción.</p>
         </div>
 
-        <div class="cols">
+        <div class="cols swipe">
           <article class="col">
             <h3>Textiles</h3>
             <p>Estampados y patrones continuos para telas, prendas, pañuelos, bolsas y accesorios.</p>
@@ -166,7 +166,7 @@
 
         <div class="process">
           <h3 class="process__title">Proceso de un encargo</h3>
-          <ol class="steps">
+          <ol class="steps swipe">
             <li><span class="step__n">01</span><h4>Brief</h4><p>Definimos producto, estilo, medidas, técnica de impresión y plazos.</p></li>
             <li><span class="step__n">02</span><h4>Bocetos</h4><p>Presento propuestas y elegimos una dirección.</p></li>
             <li><span class="step__n">03</span><h4>Ilustración final</h4><p>Desarrollo la pieza final y ajustamos color y detalle.</p></li>
@@ -187,7 +187,7 @@
           <p class="label">Acuarela en vivo</p>
           <h2 data-split>Retratos pintados mientras el evento <em>sucede</em>.</h2>
           <p class="lead">Me instalo con acuarelas, pinceles y papel de algodón. Los invitados posan unos minutos y se llevan un retrato original, pintado frente a ellos.</p>
-          <dl class="specs">
+          <dl class="specs" data-collapse="2" data-more="Ver todos los eventos" data-less="Ver menos">
             <div><dt>Bodas</dt><dd>Un recuerdo para cada invitado y una experiencia durante la celebración.</dd></div>
             <div><dt>Marcas y empresas</dt><dd>Activaciones, lanzamientos y eventos corporativos, con papel personalizado.</dd></div>
             <div><dt>Celebraciones</dt><dd>Cumpleaños, aniversarios y encuentros privados.</dd></div>
@@ -213,7 +213,7 @@
           </div>
         </header>
         <!-- Reemplaza cada .shot__ph por <img src="img/archivo.jpg" alt="descripción"> -->
-        <div class="gallery">
+        <div class="gallery swipe">
           <figure class="shot" data-cat="productos" data-cursor="Ver"><div class="shot__ph sw--plum"><span>Foto pendiente</span></div><figcaption><span>Estampado textil</span><span>Ilustración</span></figcaption></figure>
           <figure class="shot" data-cat="eventos" data-cursor="Ver"><div class="shot__ph sw--paper"><span>Foto pendiente</span></div><figcaption><span>Retratos en boda</span><span>Acuarela en vivo</span></figcaption></figure>
           <figure class="shot" data-cat="productos" data-cursor="Ver"><div class="shot__ph sw--sage"><span>Foto pendiente</span></div><figcaption><span>Línea de papelería</span><span>Ilustración</span></figcaption></figure>
@@ -233,7 +233,7 @@
           <h2 data-split>Antes de empezar</h2>
           <p class="muted">¿Otra consulta? <a href="#contacto">Escríbeme</a>.</p>
         </header>
-        <div class="faq">
+        <div class="faq" data-collapse="3" data-more="Ver más preguntas" data-less="Ver menos">
           <details>
             <summary>¿Trabajas por encargo o vendes diseños existentes?</summary>
             <p>Principalmente por encargo, creando ilustraciones nuevas para cada producto. Si te interesa un diseño de mi portafolio, consúltame por su disponibilidad.</p>
@@ -342,6 +342,7 @@
   </footer>
 
   <div class="cursor" aria-hidden="true"><span></span></div>
+  <a href="#contacto" class="mobile-cta" aria-hidden="true" tabindex="-1">Solicitar cotización</a>
   <script src="script.js"></script>
 </body>
 </html>

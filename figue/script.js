@@ -32,12 +32,16 @@
 
   /* ---------- Aparición al hacer scroll ---------- */
   const revealSel = '.section__head > p, .hero__lead, .hero__cta, .hero .label, .lead, .path, .col, .steps li, .shot, .swatch-card, .specs div, .faq details, .contact-list li, .form, .colorways__head, .gallery__more, .plate--event';
+  const mobile = window.matchMedia('(max-width: 760px)').matches;
   document.querySelectorAll(revealSel).forEach((el) => {
+    // En teléfono, las tarjetas de un carrusel aparecen junto con su carrusel
+    if (mobile && el.parentElement.classList.contains('swipe')) { el.classList.add('is-in'); return; }
     el.setAttribute('data-reveal', '');
     const sibs = [...el.parentElement.children].filter((s) => s.matches(revealSel));
     const idx = sibs.indexOf(el);
     if (idx > 0) el.style.setProperty('--rd', `${Math.min(idx, 6) * 90}ms`);
   });
+  if (mobile) document.querySelectorAll('.swipe').forEach((el) => el.setAttribute('data-reveal', ''));
   const toWatch = document.querySelectorAll('[data-reveal], [data-split]');
   if ('IntersectionObserver' in window && !reduce) {
     const io = new IntersectionObserver((entries) => {
@@ -59,6 +63,7 @@
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
     menu.classList.toggle('is-open', open);
+    document.body.classList.toggle('menu-open', open);
   };
   toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
   menu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
@@ -122,6 +127,78 @@
     loop();
   }
 
+
+  /* ---------- Carruseles para deslizar (teléfono) ---------- */
+  const swipeUIs = [];
+  document.querySelectorAll('.swipe').forEach((sw) => {
+    const ui = document.createElement('div');
+    ui.className = 'swipe-ui';
+    ui.innerHTML = '<div class="swipe-ui__dots" role="group" aria-label="Elegir tarjeta"></div><span class="swipe-ui__hint">Desliza <span aria-hidden="true">→</span></span>';
+    sw.after(ui);
+    const dots = ui.querySelector('.swipe-ui__dots');
+    const items = () => [...sw.children].filter((c) => !c.classList.contains('is-hidden'));
+    const build = () => {
+      dots.innerHTML = '';
+      items().forEach((item, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', `Ir a la tarjeta ${i + 1}`);
+        b.addEventListener('click', () => sw.scrollTo({ left: item.offsetLeft - sw.firstElementChild.offsetLeft, behavior: reduce ? 'auto' : 'smooth' }));
+        dots.appendChild(b);
+      });
+      sync();
+    };
+    const sync = () => {
+      const list = items();
+      if (!list.length) return;
+      const start = list[0].offsetLeft;
+      let idx = 0;
+      list.forEach((item, i) => { if (sw.scrollLeft >= item.offsetLeft - start - item.offsetWidth / 2) idx = i; });
+      if (sw.scrollLeft + sw.clientWidth >= sw.scrollWidth - 4) idx = list.length - 1;
+      [...dots.children].forEach((d, i) => d.setAttribute('aria-current', String(i === idx)));
+      ui.querySelector('.swipe-ui__hint').style.visibility = idx === list.length - 1 ? 'hidden' : 'visible';
+    };
+    sw.addEventListener('scroll', () => requestAnimationFrame(sync), { passive: true });
+    window.addEventListener('resize', sync);
+    build();
+    swipeUIs.push({ sw, build });
+  });
+
+  /* ---------- Ver más (teléfono) ---------- */
+  document.querySelectorAll('[data-collapse]').forEach((box) => {
+    const n = Number(box.dataset.collapse);
+    const kids = [...box.children];
+    if (kids.length <= n) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'more-btn';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = box.dataset.more;
+    const set = (open) => {
+      kids.forEach((k, i) => k.classList.toggle('is-extra', !open && i >= n));
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? box.dataset.less : box.dataset.more;
+    };
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') !== 'true';
+      set(open);
+      if (open) kids[n].querySelector('summary, dt')?.focus?.();
+      else box.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+    });
+    box.after(btn);
+    set(false);
+  });
+
+  /* ---------- Botón fijo para cotizar (teléfono) ---------- */
+  const cta = document.querySelector('.mobile-cta');
+  if (cta && 'IntersectionObserver' in window) {
+    let heroVisible = true, contactVisible = false;
+    const upd = () => cta.classList.toggle('is-shown', !heroVisible && !contactVisible);
+    new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; upd(); }).observe(document.querySelector('.hero__cta'));
+    new IntersectionObserver(([e]) => { contactVisible = e.isIntersecting; upd(); }, { threshold: 0.05 }).observe(document.getElementById('contacto'));
+    new IntersectionObserver(([e]) => { if (e.isIntersecting) { contactVisible = true; upd(); } }).observe(document.querySelector('.footer'));
+  }
+
   /* ---------- Filtro de galería ---------- */
   const filters = document.querySelectorAll('.filter');
   const shots = document.querySelectorAll('.shot');
@@ -133,6 +210,7 @@
       el.classList.toggle('is-hidden', !show);
       if (show) el.classList.add('is-in');
     });
+    swipeUIs.forEach(({ sw, build }) => { if (sw.classList.contains('gallery')) { sw.scrollLeft = 0; build(); } });
   }));
 
   /* ---------- Formulario ---------- */
