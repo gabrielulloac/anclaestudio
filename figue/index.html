@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Figue — Ilustraciones en vivo</title>
-  <meta name="description" content="Figue dibuja a tus invitados en vivo, en papel. Ilustraciones en vivo para bodas, eventos de marca, cumpleaños y celebraciones.">
-  <meta property="og:title" content="Figue — Ilustraciones en vivo">
-  <meta property="og:description" content="Retratos dibujados a mano, en vivo, durante tu evento. Un recuerdo en papel para cada invitado.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Figue — Ilustración y acuarela en vivo</title>
+  <meta name="description" content="Figue es artista e ilustradora. Ilustración para productos, textiles y papelería, y retratos en acuarela en vivo para eventos.">
+  <meta property="og:title" content="Figue — Ilustración y acuarela en vivo">
+  <meta property="og:description" content="Ilustración para productos, textiles y papelería. Retratos en acuarela en vivo para eventos.">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,10 +17,15 @@
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
 
-  <!-- Trazos reutilizables -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter>
+      <pattern id="figs" width="50" height="50" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+        <path d="M14 10c-1 0-2 1-2 2-4 1-7 5-7 9 0 4 3 6 8 6s8-2 8-6c0-4-3-8-7-9 0-1 0-2 0-2z" fill="#c9a0b8" stroke="#6d2e57" stroke-width="1.4"/>
+        <path d="M13 10c2-3 5-3 6-1-2 2-4 2-6 1z" fill="#a9bb7c" stroke="#6f8a3c" stroke-width="1.2"/>
+        <path d="M36 34c4-6 10-6 12-2-4 4-8 4-12 2z" fill="#a9bb7c" stroke="#6f8a3c" stroke-width="1.2"/>
+        <circle cx="38" cy="12" r="1.6" fill="#6d2e57"/><circle cx="8" cy="40" r="1.6" fill="#6d2e57"/>
+      </pattern>
     </defs>
   </svg>
 
@@ -32,11 +37,11 @@
       </a>
       <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span><span></span></button>
       <nav id="menu" class="nav__menu" aria-label="Principal">
-        <a href="#que-es">Qué es</a>
-        <a href="#eventos">Eventos</a>
+        <a href="#productos">Productos y papelería</a>
+        <a href="#eventos">Acuarela en vivo</a>
         <a href="#galeria">Galería</a>
         <a href="#preguntas">Preguntas</a>
-        <a href="#reservar" class="btn btn--small">Reservar fecha</a>
+        <a href="#contacto" class="btn btn--small">Contacto</a>
       </nav>
     </div>
   </header>
@@ -46,197 +51,225 @@
     <section class="hero">
       <div class="wrap hero__inner">
         <div class="hero__text">
-          <p class="hand hero__kicker">hola, soy Figue ✶</p>
-          <h1>Ilustraciones <span class="underline">en vivo</span>,<br>hechas en papel.</h1>
-          <p class="hero__lead">Llego a tu evento con mis lápices y dibujo a tus invitados en el momento. Cada persona se lleva un retrato único, hecho a mano frente a sus ojos.</p>
+          <p class="hand hero__kicker">hola, soy Figue ✶ artista</p>
+          <h1>Dibujos que se <span class="underline">usan</span>, se regalan y se guardan.</h1>
+          <p class="hero__lead">Ilustro para productos, textiles y papelería, y pinto retratos en acuarela en vivo durante tus eventos.</p>
           <div class="hero__cta">
-            <a href="#reservar" class="btn">Reservar mi fecha</a>
-            <a href="https://www.instagram.com/figue_enpapel/" class="link" target="_blank" rel="noopener">Ver en Instagram ↗</a>
+            <a href="#contacto" class="btn">Cuéntame tu idea</a>
+            <a href="https://linktr.ee/by.figue" class="link" target="_blank" rel="noopener">Todos mis enlaces ↗</a>
           </div>
         </div>
         <div class="hero__art" aria-hidden="true">
           <figure class="paper paper--a">
             <span class="tape"></span>
-            <svg viewBox="0 0 200 220" class="sketch">
-              <!-- pareja -->
-              <path d="M62 120c-18-4-26-26-20-46 6-20 28-28 44-18 14 10 16 34 6 50-6 10-18 16-30 14z"/>
-              <path d="M44 78c8-20 34-30 52-12 4-10-2-24-18-28-20-6-40 10-34 40z"/>
-              <path d="M60 92h2M78 92h2M64 106c4 4 10 4 14 0"/>
-              <path d="M128 124c-16-2-24-22-18-40 6-18 24-24 38-14 12 10 12 30 4 44-6 8-14 12-24 10z"/>
-              <path d="M104 90c-10-30 30-46 50-24 8 10 10 30 4 50 10-20 8-46-6-60-22-22-58-8-48 34z"/>
-              <path d="M124 100h2M140 100h2M126 112c4 3 9 3 12 0"/>
-              <path d="M30 210c4-40 24-62 48-62 18 0 30 10 36 24 6-14 18-22 34-22 22 0 36 22 40 60"/>
-              <path d="M150 50c4-6 12-6 14 0 2 6-6 10-14 16-8-6-16-10-14-16 2-6 10-6 14 0z" class="accent"/>
-            </svg>
-            <figcaption class="hand">Ana & Tomás · boda</figcaption>
+            <svg viewBox="0 0 200 220" class="swatch"><rect width="200" height="220" fill="url(#figs)"/></svg>
+            <figcaption class="hand">estampado · higos</figcaption>
           </figure>
           <figure class="paper paper--b">
             <span class="tape"></span>
-            <svg viewBox="0 0 200 220" class="sketch">
-              <!-- perro -->
-              <path d="M60 80c0-30 20-44 42-44s42 14 42 44c0 30-18 54-42 54S60 110 60 80z"/>
-              <path d="M62 66c-20-6-30 14-24 40 4 14 14 14 20 4M142 66c20-6 30 14 24 40-4 14-14 14-20 4"/>
-              <path d="M84 78h2M118 78h2"/>
-              <path d="M94 96c4-4 12-4 16 0-2 6-14 6-16 0zM102 102v8M94 112c4 4 12 4 16 0"/>
-              <path d="M50 210c6-40 24-70 52-70s46 30 52 70"/>
-              <path d="M80 140c10 10 34 10 44 0" class="accent"/>
-            </svg>
-            <figcaption class="hand">Toto · invitado especial</figcaption>
+            <div class="watercolor">
+              <span class="wash wash--1"></span><span class="wash wash--2"></span><span class="wash wash--3"></span>
+              <svg viewBox="0 0 200 220" class="sketch">
+                <path d="M62 120c-18-4-26-26-20-46 6-20 28-28 44-18 14 10 16 34 6 50-6 10-18 16-30 14z"/>
+                <path d="M44 78c8-20 34-30 52-12 4-10-2-24-18-28-20-6-40 10-34 40z"/>
+                <path d="M60 92h2M78 92h2M64 106c4 4 10 4 14 0"/>
+                <path d="M128 124c-16-2-24-22-18-40 6-18 24-24 38-14 12 10 12 30 4 44-6 8-14 12-24 10z"/>
+                <path d="M104 90c-10-30 30-46 50-24 8 10 10 30 4 50 10-20 8-46-6-60-22-22-58-8-48 34z"/>
+                <path d="M124 100h2M140 100h2M126 112c4 3 9 3 12 0"/>
+                <path d="M30 210c4-40 24-62 48-62 18 0 30 10 36 24 6-14 18-22 34-22 22 0 36 22 40 60"/>
+              </svg>
+            </div>
+            <figcaption class="hand">acuarela en vivo · boda</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- QUÉ ES -->
-    <section class="section" id="que-es">
-      <div class="wrap split">
-        <div>
-          <p class="eyebrow">¿Qué es una ilustración en vivo?</p>
-          <h2>Un recuerdo que se dibuja mientras pasa.</h2>
+    <!-- DOS CAMINOS -->
+    <section class="section section--tint" id="servicios">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Lo que hago</p>
+          <h2>Dos formas de trabajar juntos</h2>
+        </header>
+        <div class="paths">
+          <a class="path" href="#productos">
+            <span class="path__swatch" aria-hidden="true"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="url(#figs)"/></svg></span>
+            <span class="path__body">
+              <span class="path__tag">@figue_ilustraciones</span>
+              <h3>Ilustración para productos, textiles y papelería</h3>
+              <p>Diseño ilustraciones y estampados para tu marca: telas, ropa, empaques, tarjetas, cuadernos y más. Te entrego los archivos listos para producir.</p>
+              <span class="path__more">Ver más →</span>
+            </span>
+          </a>
+          <a class="path" href="#eventos">
+            <span class="path__swatch path__swatch--wash" aria-hidden="true"><span class="wash wash--1"></span><span class="wash wash--3"></span></span>
+            <span class="path__body">
+              <span class="path__tag">@figue_enpapel</span>
+              <h3>Retratos en acuarela en vivo para eventos</h3>
+              <p>Me instalo en tu boda, cumpleaños o evento de marca y pinto a tus invitados en el momento. Cada uno se lleva su retrato original.</p>
+              <span class="path__more">Ver más →</span>
+            </span>
+          </a>
         </div>
-        <div class="prose">
-          <p>Durante tu evento me instalo en un rincón con mi mesa, papel y lápices. Los invitados se acercan, posan unos minutos y se van con un retrato ilustrado a mano, listo para guardar o enmarcar.</p>
-          <p>Es una experiencia que entretiene, une a la gente y deja algo que dura mucho más que una foto en el celular.</p>
-          <ul class="facts">
-            <li><strong class="hand">5–8 min</strong><span>por retrato</span></li>
-            <li><strong class="hand">100%</strong><span>a mano, en papel</span></li>
-            <li><strong class="hand">1 c/u</strong><span>se lo lleva cada invitado</span></li>
-          </ul>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="section" id="productos">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Ilustración para productos</p>
+          <h2>Tu marca, dibujada a mano</h2>
+          <p class="muted">Creo ilustraciones originales pensadas para imprimirse, estamparse y venderse. Trabajo por encargo y también licencio diseños de mi colección.</p>
+        </header>
+        <div class="events">
+          <article class="event">
+            <svg viewBox="0 0 48 48" class="event__icon" aria-hidden="true"><path d="M16 6l-10 6 4 8 4-2v24h20V18l4 2 4-8-10-6c-1 4-4 6-8 6s-7-2-8-6z"/></svg>
+            <h3>Textiles</h3>
+            <p>Estampados y patrones continuos para telas, ropa, pañuelos, bolsas y accesorios.</p>
+          </article>
+          <article class="event">
+            <svg viewBox="0 0 48 48" class="event__icon" aria-hidden="true"><path d="M10 8h22l6 6v26H10zM32 8v6h6M16 22h16M16 28h16M16 34h10"/></svg>
+            <h3>Papelería</h3>
+            <p>Tarjetas, invitaciones, cuadernos, calendarios, stickers, etiquetas y láminas.</p>
+          </article>
+          <article class="event">
+            <svg viewBox="0 0 48 48" class="event__icon" aria-hidden="true"><path d="M8 16l16-8 16 8v18l-16 8-16-8zM8 16l16 8 16-8M24 24v18"/></svg>
+            <h3>Productos y empaques</h3>
+            <p>Ilustración para packaging, tazas, cerámica, etiquetas y cualquier objeto que quieras vestir.</p>
+          </article>
+        </div>
+        <div class="how">
+          <h3 class="how__title">Cómo es un encargo</h3>
+          <ol class="steps">
+            <li><span class="hand step__n">1</span><h3>Brief</h3><p>Me cuentas el producto, el estilo que buscas, medidas y plazos.</p></li>
+            <li><span class="hand step__n">2</span><h3>Bocetos</h3><p>Te muestro propuestas a mano y elegimos un camino.</p></li>
+            <li><span class="hand step__n">3</span><h3>Ilustración final</h3><p>Pinto la versión final y ajustamos colores y detalles.</p></li>
+            <li><span class="hand step__n">4</span><h3>Archivos listos</h3><p>Recibes los archivos en alta calidad, preparados para tu imprenta o fábrica.</p></li>
+          </ol>
         </div>
       </div>
     </section>
 
     <!-- EVENTOS -->
     <section class="section section--tint" id="eventos">
-      <div class="wrap">
-        <header class="section__head">
-          <p class="eyebrow">Para qué eventos</p>
-          <h2>Dibujo donde haya algo que celebrar</h2>
-        </header>
-        <div class="events">
-          <article class="event">
-            <svg viewBox="0 0 48 48" class="event__icon" aria-hidden="true"><path d="M17 22a8 8 0 1 0 0 .1M31 22a8 8 0 1 0 0 .1M20 10l4-5 4 5"/></svg>
-            <h3>Bodas</h3>
-            <p>Un regalo distinto para tus invitados y un recuerdo de su presencia para ti.</p>
-          </article>
-          <article class="event">
-            <svg viewBox="0 0 48 48" class="event__icon" aria-hidden="true"><path d="M8 40V18l16-10 16 10v22M18 40V28h12v12"/></svg>
-            <h3>Marcas y empresas</h3>
-            <p>Activaciones, lanzamientos y eventos corporativos con ilustraciones personalizadas con tu marca.</p>
-          </article>
-          <article class="event">
-            <svg viewBox="0 0 48 48" class="event__icon" aria-hidden="true"><path d="M10 40V26h28v14zM10 32c5 3 9-3 14 0s9 3 14 0M24 26v-8M24 12c-2 2-2 4 0 6 2-2 2-4 0-6z"/></svg>
-            <h3>Cumpleaños</h3>
-            <p>Para todas las edades. Una actividad que los niños y los grandes disfrutan por igual.</p>
-          </article>
-          <article class="event">
-            <svg viewBox="0 0 48 48" class="event__icon" aria-hidden="true"><path d="M8 18h32l-4 22H12zM16 18l8-10 8 10M24 26v6"/></svg>
-            <h3>Ferias y mercados</h3>
-            <p>Retratos rápidos para el público en ferias, festivales y espacios culturales.</p>
-          </article>
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Acuarela en vivo</p>
+          <h2>Un retrato pintado mientras la fiesta sucede.</h2>
+          <p class="muted">Llego con mis acuarelas, pinceles y papel. Tus invitados se sientan unos minutos y se van con un retrato original, pintado frente a sus ojos.</p>
+          <a href="https://www.instagram.com/figue_enpapel/" class="link" target="_blank" rel="noopener">Ver retratos en @figue_enpapel ↗</a>
         </div>
-      </div>
-    </section>
-
-    <!-- CÓMO FUNCIONA -->
-    <section class="section" id="como">
-      <div class="wrap">
-        <header class="section__head">
-          <p class="eyebrow">Cómo funciona</p>
-          <h2>Simple, de principio a fin</h2>
-        </header>
-        <ol class="steps">
-          <li><span class="hand step__n">1</span><h3>Me escribes</h3><p>Cuéntame la fecha, el lugar y cuántos invitados esperas.</p></li>
-          <li><span class="hand step__n">2</span><h3>Armamos la propuesta</h3><p>Definimos horas, formato del papel y si quieres algún detalle personalizado.</p></li>
-          <li><span class="hand step__n">3</span><h3>Dibujo en vivo</h3><p>Llego con todo mi material y me instalo en un rincón del evento.</p></li>
-          <li><span class="hand step__n">4</span><h3>Se lo llevan</h3><p>Cada invitado recibe su ilustración en un sobre, lista para guardar.</p></li>
-        </ol>
+        <div class="tiles">
+          <div class="tile"><h3>Bodas</h3><p>Un regalo para tus invitados y un recuerdo de cada uno para ustedes.</p></div>
+          <div class="tile"><h3>Marcas y empresas</h3><p>Activaciones, lanzamientos y eventos corporativos, con papel personalizado.</p></div>
+          <div class="tile"><h3>Cumpleaños</h3><p>Para todas las edades, y también para las mascotas de la casa.</p></div>
+          <div class="tile"><h3>Ferias y mercados</h3><p>Retratos para el público en festivales y espacios culturales.</p></div>
+        </div>
       </div>
     </section>
 
     <!-- GALERÍA -->
-    <section class="section section--tint" id="galeria">
+    <section class="section" id="galeria">
       <div class="wrap">
         <header class="section__head section__head--row">
           <div>
             <p class="eyebrow">Galería</p>
-            <h2>Algunos dibujos</h2>
+            <h2>Algunos trabajos</h2>
           </div>
-          <a href="https://www.instagram.com/figue_enpapel/" class="link" target="_blank" rel="noopener">Más en @figue_enpapel ↗</a>
+          <div class="filters" role="group" aria-label="Filtrar galería">
+            <button class="filter is-active" data-filter="all" aria-pressed="true">Todo</button>
+            <button class="filter" data-filter="productos" aria-pressed="false">Productos</button>
+            <button class="filter" data-filter="eventos" aria-pressed="false">Acuarela en vivo</button>
+          </div>
         </header>
-        <!-- Reemplaza cada .shot por una <img src="img/....jpg" alt="..."> con fotos reales -->
+        <!-- Reemplaza cada .shot__ph por <img src="img/archivo.jpg" alt="descripción"> -->
         <div class="gallery">
-          <figure class="shot"><div class="shot__ph"><span class="hand">tu foto aquí</span></div><figcaption>Boda en el campo</figcaption></figure>
-          <figure class="shot"><div class="shot__ph"><span class="hand">tu foto aquí</span></div><figcaption>Lanzamiento de marca</figcaption></figure>
-          <figure class="shot"><div class="shot__ph"><span class="hand">tu foto aquí</span></div><figcaption>Cumpleaños 30</figcaption></figure>
-          <figure class="shot"><div class="shot__ph"><span class="hand">tu foto aquí</span></div><figcaption>Feria de diseño</figcaption></figure>
-          <figure class="shot"><div class="shot__ph"><span class="hand">tu foto aquí</span></div><figcaption>Retrato de mascota</figcaption></figure>
-          <figure class="shot"><div class="shot__ph"><span class="hand">tu foto aquí</span></div><figcaption>Evento corporativo</figcaption></figure>
+          <figure class="shot" data-cat="productos"><div class="shot__ph"><span class="hand">foto aquí</span></div><figcaption>Estampado textil</figcaption></figure>
+          <figure class="shot" data-cat="eventos"><div class="shot__ph"><span class="hand">foto aquí</span></div><figcaption>Retratos en una boda</figcaption></figure>
+          <figure class="shot" data-cat="productos"><div class="shot__ph"><span class="hand">foto aquí</span></div><figcaption>Línea de papelería</figcaption></figure>
+          <figure class="shot" data-cat="eventos"><div class="shot__ph"><span class="hand">foto aquí</span></div><figcaption>Evento de marca</figcaption></figure>
+          <figure class="shot" data-cat="productos"><div class="shot__ph"><span class="hand">foto aquí</span></div><figcaption>Empaque ilustrado</figcaption></figure>
+          <figure class="shot" data-cat="eventos"><div class="shot__ph"><span class="hand">foto aquí</span></div><figcaption>Cumpleaños</figcaption></figure>
         </div>
+        <p class="gallery__more">Más trabajos en <a href="https://www.instagram.com/figue_ilustraciones/" target="_blank" rel="noopener">@figue_ilustraciones</a> y <a href="https://www.instagram.com/figue_enpapel/" target="_blank" rel="noopener">@figue_enpapel</a>.</p>
       </div>
     </section>
 
     <!-- PREGUNTAS -->
-    <section class="section" id="preguntas">
+    <section class="section section--tint" id="preguntas">
       <div class="wrap split">
         <div>
           <p class="eyebrow">Preguntas frecuentes</p>
           <h2>Lo que más me preguntan</h2>
-          <p class="muted">¿Tienes otra duda? <a href="#reservar">Escríbeme</a>.</p>
+          <p class="muted">¿Tienes otra duda? <a href="#contacto">Escríbeme</a>.</p>
         </div>
         <div class="faq">
           <details>
-            <summary>¿Cuántas ilustraciones alcanzas a hacer?</summary>
-            <p>Entre 8 y 12 retratos individuales por hora, aproximadamente. Los dibujos de parejas o grupos toman un poco más.</p>
+            <summary>¿Vendes diseños o solo trabajas por encargo?</summary>
+            <p>Las dos cosas. Puedo crear una ilustración nueva para tu producto o licenciarte un diseño de mi colección.</p>
           </details>
           <details>
-            <summary>¿Cuánto tiempo te contratan normalmente?</summary>
-            <p>Lo más común son entre 2 y 4 horas. Te ayudo a calcularlo según la cantidad de invitados.</p>
+            <summary>¿En qué formato entregas las ilustraciones?</summary>
+            <p>En archivos digitales de alta resolución, preparados para la técnica de impresión que uses. Lo vemos juntos en el brief.</p>
           </details>
           <details>
-            <summary>¿Qué necesito tener en el lugar?</summary>
-            <p>Solo una mesa pequeña, dos sillas y buena luz. Yo llevo todos los materiales.</p>
+            <summary>¿Cuánto tarda un encargo de ilustración?</summary>
+            <p>Depende del proyecto y de cuántas piezas sean. Te doy un plazo concreto junto con la cotización.</p>
           </details>
           <details>
-            <summary>¿Se pueden personalizar las ilustraciones?</summary>
-            <p>Sí. Puedo usar papel con el nombre de los novios, la fecha del evento o el logo de tu marca.</p>
+            <summary>¿Cuántos retratos alcanzas a pintar en un evento?</summary>
+            <p>Depende de las horas contratadas y de si son retratos individuales o de grupo. Te ayudo a calcularlo según tus invitados.</p>
           </details>
           <details>
-            <summary>¿Viajas a otras ciudades?</summary>
-            <p>Sí, consulta disponibilidad. Los traslados se cotizan aparte.</p>
+            <summary>¿Qué necesito tener en el lugar del evento?</summary>
+            <p>Una mesa pequeña, dos sillas y buena luz. Yo llevo las acuarelas y todo el material.</p>
           </details>
           <details>
             <summary>¿Con cuánta anticipación debo reservar?</summary>
-            <p>Lo ideal es con uno a tres meses de anticipación, sobre todo en temporada alta. Igual pregúntame si es antes.</p>
+            <p>Mientras antes mejor, sobre todo en temporada de bodas. Escríbeme con tu fecha y te confirmo disponibilidad.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- RESERVAR -->
-    <section class="section section--ink" id="reservar">
+    <!-- CONTACTO -->
+    <section class="section section--ink" id="contacto">
       <div class="wrap split">
         <div>
-          <p class="eyebrow">Reservar</p>
-          <h2>¿Dibujamos tu evento?</h2>
-          <p>Completa los datos y te armo el mensaje. Se copia automáticamente y te llevo a mi Instagram para que solo lo pegues y envíes.</p>
-          <a class="ig" href="https://ig.me/m/figue_enpapel" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
-            @figue_enpapel
-          </a>
+          <p class="eyebrow">Contacto</p>
+          <h2>¿Trabajamos juntos?</h2>
+          <p>Completa los datos y te armo el mensaje. Lo copias, abres el Instagram que corresponde y lo pegas en el chat.</p>
+          <ul class="ig-list">
+            <li><a class="ig" href="https://www.instagram.com/figue_ilustraciones/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>@figue_ilustraciones</a><span>productos y papelería</span></li>
+            <li><a class="ig" href="https://www.instagram.com/figue_enpapel/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>@figue_enpapel</a><span>acuarela en vivo</span></li>
+            <li><a class="ig" href="https://linktr.ee/by.figue" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>linktr.ee/by.figue</a><span>todos mis enlaces</span></li>
+          </ul>
         </div>
         <form class="form" id="booking" novalidate>
+          <div class="field">
+            <label for="servicio">¿Qué necesitas?</label>
+            <select id="servicio" name="servicio">
+              <option value="productos">Ilustración para productos, textiles o papelería</option>
+              <option value="eventos">Retratos en acuarela en vivo para un evento</option>
+            </select>
+          </div>
           <div class="row">
             <div class="field">
-              <label for="nombre">Tu nombre</label>
+              <label for="nombre">Tu nombre o marca</label>
               <input id="nombre" name="nombre" autocomplete="name" required>
             </div>
             <div class="field">
-              <label for="fecha">Fecha del evento</label>
-              <input id="fecha" name="fecha" type="date" required>
+              <label for="lugar">Ciudad</label>
+              <input id="lugar" name="lugar" autocomplete="address-level2">
             </div>
           </div>
-          <div class="row">
+          <div class="row" data-only="eventos" hidden>
+            <div class="field">
+              <label for="fecha">Fecha del evento</label>
+              <input id="fecha" name="fecha" type="date">
+            </div>
             <div class="field">
               <label for="tipo">Tipo de evento</label>
               <select id="tipo" name="tipo">
@@ -247,20 +280,21 @@
                 <option>Otro</option>
               </select>
             </div>
-            <div class="field">
-              <label for="invitados">N.º de invitados</label>
-              <input id="invitados" name="invitados" type="number" min="1" inputmode="numeric">
-            </div>
+          </div>
+          <div class="field" data-only="productos">
+            <label for="producto">Producto</label>
+            <select id="producto" name="producto">
+              <option>Textil / estampado</option>
+              <option>Papelería</option>
+              <option>Empaque o etiqueta</option>
+              <option>Otro producto</option>
+            </select>
           </div>
           <div class="field">
-            <label for="lugar">Ciudad / lugar</label>
-            <input id="lugar" name="lugar" required>
+            <label for="mensaje">Cuéntame tu idea</label>
+            <textarea id="mensaje" name="mensaje" rows="3" required></textarea>
           </div>
-          <div class="field">
-            <label for="mensaje">Algo más que quieras contarme</label>
-            <textarea id="mensaje" name="mensaje" rows="3"></textarea>
-          </div>
-          <button class="btn btn--light" type="submit">Copiar mensaje y abrir Instagram</button>
+          <button class="btn btn--light" type="submit">Preparar mensaje</button>
           <p class="form__status" role="status" aria-live="polite"></p>
           <pre class="form__preview" hidden></pre>
         </form>
@@ -270,8 +304,8 @@
 
   <footer class="footer">
     <div class="wrap footer__inner">
-      <span class="hand footer__sig">Figue ✶ ilustraciones en vivo</span>
-      <span>© <span id="year">2026</span> · <a href="https://www.instagram.com/figue_enpapel/" target="_blank" rel="noopener">@figue_enpapel</a></span>
+      <span class="hand footer__sig">Figue ✶ artista</span>
+      <span>© <span id="year">2026</span> · <a href="https://linktr.ee/by.figue" target="_blank" rel="noopener">linktr.ee/by.figue</a></span>
     </div>
   </footer>
 
