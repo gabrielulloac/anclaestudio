@@ -21,7 +21,7 @@
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
   // Aparición al hacer scroll
-  const targets = document.querySelectorAll('.section__head, .split > *, .event, .steps li, .shot');
+  const targets = document.querySelectorAll('.section__head, .split > *, .col, .steps li, .shot, .path');
   if ('IntersectionObserver' in window) {
     targets.forEach((el) => el.classList.add('reveal'));
     const io = new IntersectionObserver((entries) => {
