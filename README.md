@@ -17,3 +17,10 @@ Sitio de Figue, artista: ilustración para productos, textiles y papelería (@fi
 
 - Fotos de la galería: guárdalas en `figue/img/` y reemplaza cada `<div class="shot__ph">…</div>` por `<img src="img/archivo.jpg" alt="descripción">`. El atributo `data-cat` (`productos` o `eventos`) define el filtro.
 - El formulario arma el mensaje, lo copia y enlaza al chat de Instagram de la cuenta que corresponde (`IG` en `figue/script.js`).
+
+## TOMA (`toma/`)
+
+Sitio de ejemplo para un estudio audiovisual inventado (TOMA, Valparaíso): carrusel a pantalla completa, portafolio con filtros, paquetes por línea de trabajo, proceso, qué incluye, preguntas y contacto. Todo el contenido es ficticio.
+
+- Fotos: reemplaza cada `<div class="ph ph--…"></div>` por `<img src="img/archivo.jpg" alt="descripción">`.
+- Datos de contacto: sección `#contacto` en `toma/index.html`.
