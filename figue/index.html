@@ -17,17 +17,18 @@
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
 
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
     <defs>
-      <pattern id="figs" width="64" height="64" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
-        <g fill="none" stroke="#5a2747" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 12c-1 0-2 1-2 3-5 1-9 6-9 11 0 5 4 8 11 8s11-3 11-8c0-5-4-10-9-11 0-2-1-3-2-3z"/>
-          <path d="M14 26c2 2 6 2 8 0"/>
-          <path d="M18 12c3-4 7-4 9-2-3 3-6 3-9 2z" stroke="#6e7a5a"/>
-          <path d="M44 42c6-8 14-8 16-3-5 5-11 6-16 3zM44 42c5-1 10-2 14-3" stroke="#6e7a5a"/>
-          <circle cx="48" cy="14" r="1"/><circle cx="10" cy="52" r="1"/><circle cx="34" cy="58" r="1"/>
-        </g>
-      </pattern>
+      <filter id="wc" x="-25%" y="-25%" width="150%" height="150%">
+        <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="3" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="12" result="d"/>
+        <feGaussianBlur in="d" stdDeviation="1.4"/>
+      </filter>
+      <path id="leaf" pathLength="1" d="M0 0C-10-10-40-10-55-30C-45-35-40-45-48-60C-30-58-22-70-20-90C-10-80-5-85 0-110C5-85 10-80 20-90C22-70 30-58 48-60C40-45 45-35 55-30C40-10 10-10 0 0Z"/>
+      <path id="vein" pathLength="1" d="M0-2V-98M0-22L-42-34M0-22L42-34M0-48L-34-64M0-48L34-64M0-72L-16-86M0-72L16-86"/>
+      <path id="fig" pathLength="1" d="M0 0C-3 4-5 9-7 14C-28 20-36 48-29 68C-21 86 21 86 29 68C36 48 28 20 7 14C5 9 3 4 0 0Z"/>
+      <path id="figline" pathLength="1" d="M-15 40C-18 52-13 62-6 66"/>
+      <path id="circ" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/>
     </defs>
   </svg>
 
@@ -51,7 +52,7 @@
       <div class="wrap hero__inner">
         <div class="hero__text">
           <p class="label">Artista e ilustradora</p>
-          <h1>Ilustración hecha a mano para marcas, objetos y momentos.</h1>
+          <h1 data-split>Ilustración hecha a mano para marcas, <em>objetos</em> y momentos.</h1>
           <p class="hero__lead">Diseño ilustraciones para productos, textiles y papelería, y pinto retratos en acuarela en vivo durante eventos.</p>
           <div class="hero__cta">
             <a href="#contacto" class="btn">Solicitar cotización</a>
@@ -59,34 +60,62 @@
           </div>
         </div>
         <div class="hero__art" aria-hidden="true">
-          <figure class="plate plate--main">
-            <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"><rect width="400" height="500" fill="url(#figs)"/></svg>
-            <figcaption>Estampado · Higos</figcaption>
-          </figure>
-          <figure class="plate plate--inset">
-            <div class="wc"><span></span><span></span><span></span><span></span></div>
-            <figcaption>Acuarela</figcaption>
-          </figure>
+          <svg class="branch" viewBox="0 0 400 480">
+            <g class="paint-layer" filter="url(#wc)">
+              <g transform="translate(132 274) rotate(-50) scale(1.15)"><use class="paint leafc" href="#leaf" style="--d:1.5s"/></g>
+              <g transform="translate(300 180) rotate(48) scale(1.05)"><use class="paint leafc" href="#leaf" style="--d:1.7s"/></g>
+              <g transform="translate(236 124) rotate(8) scale(.9)"><use class="paint leafc" href="#leaf" style="--d:1.9s"/></g>
+              <g transform="translate(180 126) rotate(-70) scale(.7)"><use class="paint leafc" href="#leaf" style="--d:2.1s"/></g>
+              <g transform="translate(169 306) rotate(10) scale(.9)"><use class="paint figc" href="#fig" style="--d:1.8s"/></g>
+              <g transform="translate(210 284) rotate(-8) scale(1.05)"><use class="paint figc" href="#fig" style="--d:2s"/></g>
+              <g transform="translate(266 216) rotate(12) scale(.85)"><use class="paint figc" href="#fig" style="--d:2.2s"/></g>
+            </g>
+            <g class="ink">
+              <path class="ln" pathLength="1" style="--d:.2s" d="M196 470C200 410 186 350 204 290C218 240 214 190 232 120"/>
+              <path class="ln" pathLength="1" style="--d:.5s" d="M202 330C176 312 150 300 128 270"/>
+              <path class="ln" pathLength="1" style="--d:.6s" d="M214 236C246 222 272 206 296 176"/>
+              <path class="ln" pathLength="1" style="--d:.7s" d="M226 160C210 140 196 130 176 122"/>
+              <g transform="translate(128 270) rotate(-50) scale(1.15)"><use class="ln" href="#leaf" style="--d:.8s"/><use class="ln thin" href="#vein" style="--d:1.2s"/></g>
+              <g transform="translate(296 176) rotate(48) scale(1.05)"><use class="ln" href="#leaf" style="--d:.9s"/><use class="ln thin" href="#vein" style="--d:1.3s"/></g>
+              <g transform="translate(232 120) rotate(8) scale(.9)"><use class="ln" href="#leaf" style="--d:1s"/><use class="ln thin" href="#vein" style="--d:1.4s"/></g>
+              <g transform="translate(176 122) rotate(-70) scale(.7)"><use class="ln" href="#leaf" style="--d:1.1s"/><use class="ln thin" href="#vein" style="--d:1.5s"/></g>
+              <g transform="translate(165 302) rotate(10) scale(.9)"><use class="ln" href="#fig" style="--d:1s"/><use class="ln thin" href="#figline" style="--d:1.6s"/></g>
+              <g transform="translate(206 280) rotate(-8) scale(1.05)"><use class="ln" href="#fig" style="--d:1.1s"/><use class="ln thin" href="#figline" style="--d:1.7s"/></g>
+              <g transform="translate(262 212) rotate(12) scale(.85)"><use class="ln" href="#fig" style="--d:1.2s"/><use class="ln thin" href="#figline" style="--d:1.8s"/></g>
+            </g>
+          </svg>
+          <svg class="stamp" viewBox="0 0 200 200">
+            <text><textPath href="#circ" textLength="470">Ilustración · Acuarela en vivo · Figue · </textPath></text>
+            <text x="100" y="116" text-anchor="middle" class="stamp__f">F</text>
+          </svg>
+          <p class="hero__caption">Rama de higuera · tinta y acuarela</p>
         </div>
       </div>
     </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Estampados textiles</span><i>✺</i><span><em>Papelería</em></span><i>✺</i><span>Packaging</span><i>✺</i><span><em>Acuarela en vivo</em></span><i>✺</i><span>Invitaciones</span><i>✺</i>
+        <span>Estampados textiles</span><i>✺</i><span><em>Papelería</em></span><i>✺</i><span>Packaging</span><i>✺</i><span><em>Acuarela en vivo</em></span><i>✺</i><span>Invitaciones</span><i>✺</i>
+      </div>
+    </div>
 
     <!-- SERVICIOS -->
     <section class="section section--rule" id="servicios">
       <div class="wrap">
         <header class="section__head">
           <p class="label">Servicios</p>
-          <h2>Dos líneas de trabajo</h2>
+          <h2 data-split>Dos líneas de trabajo</h2>
         </header>
         <div class="paths">
-          <a class="path" href="#productos">
+          <a class="path" href="#productos" data-cursor="Ver">
             <span class="path__tag">@figue_ilustraciones</span>
             <h3>Ilustración para productos, textiles y papelería</h3>
             <p>Ilustraciones y estampados originales para tu marca, entregados en archivos listos para producción.</p>
             <ul class="path__list"><li>Estampados textiles</li><li>Papelería e invitaciones</li><li>Packaging y etiquetas</li></ul>
             <span class="path__more">Conocer el servicio <span aria-hidden="true">→</span></span>
           </a>
-          <a class="path" href="#eventos">
+          <a class="path" href="#eventos" data-cursor="Ver">
             <span class="path__tag">@figue_enpapel</span>
             <h3>Retratos en acuarela en vivo para eventos</h3>
             <p>Retratos pintados en el momento. Cada invitado se lleva una pieza original en papel de acuarela.</p>
@@ -103,7 +132,7 @@
         <div class="split">
           <header>
             <p class="label">Ilustración para productos</p>
-            <h2>Una identidad visual que se puede tocar.</h2>
+            <h2 data-split>Una identidad visual que se puede <em>tocar</em>.</h2>
           </header>
           <p class="lead">Creo ilustraciones originales pensadas para imprimirse, estamparse y venderse. Trabajo por encargo para marcas y estudios, adaptando cada pieza a su técnica de producción.</p>
         </div>
@@ -123,6 +152,18 @@
           </article>
         </div>
 
+        <div class="colorways">
+          <div class="colorways__head">
+            <h3>Un estampado, tres colorways</h3>
+            <p class="muted">Cada diseño se entrega en las combinaciones de color que necesite tu colección.</p>
+          </div>
+          <div class="swatches">
+            <figure class="swatch-card"><div class="sw sw--plum"></div><figcaption><span>Ciruela</span><span>01</span></figcaption></figure>
+            <figure class="swatch-card"><div class="sw sw--paper"></div><figcaption><span>Papel</span><span>02</span></figcaption></figure>
+            <figure class="swatch-card"><div class="sw sw--sage"></div><figcaption><span>Salvia</span><span>03</span></figcaption></figure>
+          </div>
+        </div>
+
         <div class="process">
           <h3 class="process__title">Proceso de un encargo</h3>
           <ol class="steps">
@@ -138,12 +179,13 @@
     <!-- EVENTOS -->
     <section class="section" id="eventos">
       <div class="wrap split split--media">
-        <figure class="plate plate--event" aria-hidden="true">
-          <div class="wc wc--large"><span></span><span></span><span></span><span></span></div>
+        <figure class="plate plate--event">
+          <div class="wc wc--large" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <span class="live"><span class="live__dot"></span>En vivo</span>
         </figure>
         <div>
           <p class="label">Acuarela en vivo</p>
-          <h2>Retratos pintados mientras el evento sucede.</h2>
+          <h2 data-split>Retratos pintados mientras el evento <em>sucede</em>.</h2>
           <p class="lead">Me instalo con acuarelas, pinceles y papel de algodón. Los invitados posan unos minutos y se llevan un retrato original, pintado frente a ellos.</p>
           <dl class="specs">
             <div><dt>Bodas</dt><dd>Un recuerdo para cada invitado y una experiencia durante la celebración.</dd></div>
@@ -162,7 +204,7 @@
         <header class="section__head section__head--row">
           <div>
             <p class="label">Trabajos</p>
-            <h2>Selección</h2>
+            <h2 data-split>Selección</h2>
           </div>
           <div class="filters" role="group" aria-label="Filtrar trabajos">
             <button class="filter is-active" data-filter="all" aria-pressed="true">Todo</button>
@@ -172,12 +214,12 @@
         </header>
         <!-- Reemplaza cada .shot__ph por <img src="img/archivo.jpg" alt="descripción"> -->
         <div class="gallery">
-          <figure class="shot" data-cat="productos"><div class="shot__ph"><span>Imagen</span></div><figcaption><span>Estampado textil</span><span>Ilustración</span></figcaption></figure>
-          <figure class="shot" data-cat="eventos"><div class="shot__ph"><span>Imagen</span></div><figcaption><span>Retratos en boda</span><span>Acuarela en vivo</span></figcaption></figure>
-          <figure class="shot" data-cat="productos"><div class="shot__ph"><span>Imagen</span></div><figcaption><span>Línea de papelería</span><span>Ilustración</span></figcaption></figure>
-          <figure class="shot" data-cat="eventos"><div class="shot__ph"><span>Imagen</span></div><figcaption><span>Evento de marca</span><span>Acuarela en vivo</span></figcaption></figure>
-          <figure class="shot" data-cat="productos"><div class="shot__ph"><span>Imagen</span></div><figcaption><span>Packaging</span><span>Ilustración</span></figcaption></figure>
-          <figure class="shot" data-cat="eventos"><div class="shot__ph"><span>Imagen</span></div><figcaption><span>Celebración privada</span><span>Acuarela en vivo</span></figcaption></figure>
+          <figure class="shot" data-cat="productos" data-cursor="Ver"><div class="shot__ph sw--plum"><span>Foto pendiente</span></div><figcaption><span>Estampado textil</span><span>Ilustración</span></figcaption></figure>
+          <figure class="shot" data-cat="eventos" data-cursor="Ver"><div class="shot__ph sw--paper"><span>Foto pendiente</span></div><figcaption><span>Retratos en boda</span><span>Acuarela en vivo</span></figcaption></figure>
+          <figure class="shot" data-cat="productos" data-cursor="Ver"><div class="shot__ph sw--sage"><span>Foto pendiente</span></div><figcaption><span>Línea de papelería</span><span>Ilustración</span></figcaption></figure>
+          <figure class="shot" data-cat="eventos" data-cursor="Ver"><div class="shot__ph sw--paper"><span>Foto pendiente</span></div><figcaption><span>Evento de marca</span><span>Acuarela en vivo</span></figcaption></figure>
+          <figure class="shot" data-cat="productos" data-cursor="Ver"><div class="shot__ph sw--plum"><span>Foto pendiente</span></div><figcaption><span>Packaging</span><span>Ilustración</span></figcaption></figure>
+          <figure class="shot" data-cat="eventos" data-cursor="Ver"><div class="shot__ph sw--sage"><span>Foto pendiente</span></div><figcaption><span>Celebración privada</span><span>Acuarela en vivo</span></figcaption></figure>
         </div>
         <p class="gallery__more">Más trabajos en <a href="https://www.instagram.com/figue_ilustraciones/" target="_blank" rel="noopener">@figue_ilustraciones</a> y <a href="https://www.instagram.com/figue_enpapel/" target="_blank" rel="noopener">@figue_enpapel</a></p>
       </div>
@@ -188,7 +230,7 @@
       <div class="wrap split">
         <header>
           <p class="label">Preguntas frecuentes</p>
-          <h2>Antes de empezar</h2>
+          <h2 data-split>Antes de empezar</h2>
           <p class="muted">¿Otra consulta? <a href="#contacto">Escríbeme</a>.</p>
         </header>
         <div class="faq">
@@ -225,7 +267,7 @@
       <div class="wrap split">
         <div>
           <p class="label">Contacto</p>
-          <h2>Conversemos sobre tu proyecto.</h2>
+          <h2 data-split>Conversemos sobre tu <em>proyecto</em>.</h2>
           <p class="lead">Completa el formulario y se prepara un mensaje con los detalles. Lo copias y lo envías por Instagram a la cuenta que corresponde.</p>
           <ul class="contact-list">
             <li><span>Ilustración</span><a href="https://www.instagram.com/figue_ilustraciones/" target="_blank" rel="noopener">@figue_ilustraciones</a></li>
@@ -289,13 +331,17 @@
   </main>
 
   <footer class="footer">
+    <div class="wrap">
+      <a href="#top" class="footer__mark" aria-label="Volver arriba">Figue</a>
+    </div>
     <div class="wrap footer__inner">
-      <span class="brand brand--small">Figue</span>
+      <span>Ilustración y acuarela</span>
       <span>© <span id="year">2026</span> Figue · Ilustración y acuarela</span>
       <a href="https://linktr.ee/by.figue" target="_blank" rel="noopener">linktr.ee/by.figue</a>
     </div>
   </footer>
 
+  <div class="cursor" aria-hidden="true"><span></span></div>
   <script src="script.js"></script>
 </body>
 </html>
